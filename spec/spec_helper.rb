@@ -9,7 +9,7 @@ ActiveRecord::Base.establish_connection(
   database: File.join(PROJECT_ROOT, "test.db")
 )
 
-class CreateSchema < ActiveRecord::Migration
+class CreateSchema < ActiveRecord::Migration[6.1]
   def self.up
     create_table :people, force: true do |table|
       table.string :first_name
